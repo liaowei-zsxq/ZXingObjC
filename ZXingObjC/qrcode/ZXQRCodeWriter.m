@@ -71,6 +71,9 @@ const int ZX_QUIET_ZONE_SIZE = 4;
   int outputHeight = MAX(height, qrHeight);
 
   int multiple = MIN(outputWidth / qrWidth, outputHeight / qrHeight);
+  // resize output
+  outputWidth = inputWidth * multiple;
+  outputHeight = inputHeight * multiple;
   // Padding includes both the quiet zone and the extra white pixels to accommodate the requested
   // dimensions. For example, if input is 25x25 the QR will be 33x33 including the quiet zone.
   // If the requested size is 200x160, the multiple will be 4, for a QR of 132x132. These will
