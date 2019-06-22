@@ -1,4 +1,4 @@
-# ZXingObjC
+# zxingify-objc
 
 ZXingObjC is a full Objective-C port of [ZXing](https://github.com/zxing/zxing) ("Zebra Crossing"), a Java barcode image processing library. It is designed to be used on both iOS devices and in Mac applications.
 
@@ -96,7 +96,7 @@ github "TheLevelUp/ZXingObjC" ~> 3.6
 
 ```ruby
 platform :ios, '8.0'
-pod 'ZXingObjC', '~> 3.6.3'
+pod 'ZXingObjC', '~> 3.6.4'
 ```
 
 ## Examples
@@ -110,6 +110,7 @@ ZXingObjC includes several example applications found in "examples" folder:
 
 - [cwalcott](https://github.com/cwalcott) initial creator of this project
 - [neacao](https://github.com/neacao) for his unparalleled support lately
+- [claybridges](https://github.com/claybridges) for all the help regarding the project move
 
 ## License
 
