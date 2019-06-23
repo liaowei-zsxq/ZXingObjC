@@ -37,11 +37,11 @@
         offColor = UIColor.clearColor;
     }
 
-    CGFloat scale = [UIScreen mainScreen].scale;
-    ZXEncodeHints *hints = [ZXEncodeHints hints];
+    CGFloat scale = UIScreen.mainScreen.scale;
+    ZXEncodeHints *hints = ZXEncodeHints.hints;
     hints.encoding = NSUTF8StringEncoding;
-    hints.margin = [NSNumber numberWithInteger:0];
-    hints.errorCorrectionLevel = [ZXQRCodeErrorCorrectionLevel errorCorrectionLevelL];
+    hints.margin = @(0);
+    hints.errorCorrectionLevel = ZXQRCodeErrorCorrectionLevel.errorCorrectionLevelM;
 
     NSError *error = nil;
     ZXQRCodeWriter *writer = [[ZXQRCodeWriter alloc] init];
@@ -52,7 +52,7 @@
                                    hints:hints
                                    error:&error];
 
-    CGImageRef imageRef = CGImageRetain([[ZXImage imageWithMatrix:result onColor:onColor.CGColor offColor:offColor.CGColor] cgimage]);
+    CGImageRef imageRef = CGImageRetain([ZXImage imageWithMatrix:result onColor:onColor.CGColor offColor:offColor.CGColor].cgimage);
     UIImage *image = [UIImage imageWithCGImage:imageRef scale:scale orientation:UIImageOrientationUp];
     CGImageRelease(imageRef);
 
