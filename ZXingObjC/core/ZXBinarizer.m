@@ -16,13 +16,13 @@
 
 #import "ZXBinarizer.h"
 
-#if TARGET_OS_EMBEDDED || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_OSX
+#define ZXBlack CGColorGetConstantColor(kCGColorBlack)
+#define ZXWhite CGColorGetConstantColor(kCGColorWhite)
+#else
 #import <UIKit/UIKit.h>
 #define ZXBlack [[UIColor blackColor] CGColor]
 #define ZXWhite [[UIColor whiteColor] CGColor]
-#else
-#define ZXBlack CGColorGetConstantColor(kCGColorBlack)
-#define ZXWhite CGColorGetConstantColor(kCGColorWhite)
 #endif
 
 @implementation ZXBinarizer

@@ -211,13 +211,25 @@
 }
 
 - (BOOL)hasFront {
+#if TARGET_OS_MACCATALYST
+  return [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
+                                                                mediaType:AVMediaTypeVideo
+                                                                 position:AVCaptureDevicePositionFront].devices.count > 0;
+#else
   NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
   return [devices count] > 1;
+#endif
 }
 
 - (BOOL)hasBack {
+#if TARGET_OS_MACCATALYST
+  return [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
+                                                                mediaType:AVMediaTypeVideo
+                                                                 position:AVCaptureDevicePositionBack].devices.count > 0;
+#else
   NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
   return [devices count] > 0;
+#endif
 }
 
 - (BOOL)hasTorch {
@@ -521,7 +533,33 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   }
   
   AVCaptureDevice *zxd = nil;
-  
+#if TARGET_OS_MACCATALYST
+  NSArray<AVCaptureDevice *> *devices = nil;
+  if (self.captureDeviceIndex == -1) {
+    AVCaptureDevicePosition position = AVCaptureDevicePositionBack;
+    if (self.camera == self.front) {
+      position = AVCaptureDevicePositionFront;
+      devices = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
+                                                                       mediaType:AVMediaTypeVideo
+                                                                        position:position].devices;
+      zxd = devices.firstObject;
+      if (!zxd) {
+        position = AVCaptureDevicePositionBack;
+      }
+    }
+
+    if (!zxd) {
+      devices = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
+                                                                       mediaType:AVMediaTypeVideo
+                                                                        position:position].devices;
+      zxd = devices.firstObject;
+    }
+
+    if (zxd) {
+      self.captureDeviceIndex = 0;
+    }
+  }
+#else
   NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
   
   if ([devices count] > 0) {
@@ -549,7 +587,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   if (!zxd) {
     zxd = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
   }
-  
+#endif
   self.captureDevice = zxd;
   
   return zxd;
