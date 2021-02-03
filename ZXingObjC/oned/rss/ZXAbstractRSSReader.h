@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXOneDReader.h"
+#import <ZXingObjC/ZXOneDReader.h>
 
 @class ZXIntArray;
 

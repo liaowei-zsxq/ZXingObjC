@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXMultipleBarcodeReader.h"
-#import "ZXQRCodeReader.h"
+#import <ZXingObjC/ZXMultipleBarcodeReader.h>
+#import <ZXingObjC/ZXQRCodeReader.h>
 
 /**
  * This implementation can detect and decode multiple QR Codes in an image.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXLuminanceSource.h"
+#import <ZXingObjC/ZXLuminanceSource.h>
 
 /**
  * A wrapper implementation of ZXLuminanceSource which inverts the luminances it returns -- black becomes

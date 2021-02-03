@@ -18,17 +18,17 @@
 
 #define _ZXINGOBJC_DATAMATRIX_
 
-#import "ZXDataMatrixDecoder.h"
-#import "ZXDataMatrixDefaultPlacement.h"
-#import "ZXDataMatrixDetector.h"
-#import "ZXDataMatrixEdifactEncoder.h"
-#import "ZXDataMatrixEncoder.h"
-#import "ZXDataMatrixEncoderContext.h"
-#import "ZXDataMatrixErrorCorrection.h"
-#import "ZXDataMatrixHighLevelEncoder.h"
-#import "ZXDataMatrixReader.h"
-#import "ZXDataMatrixSymbolInfo.h"
-#import "ZXDataMatrixVersion.h"
-#import "ZXDataMatrixWriter.h"
+#import <ZXingObjC/ZXDataMatrixDecoder.h>
+#import <ZXingObjC/ZXDataMatrixDefaultPlacement.h>
+#import <ZXingObjC/ZXDataMatrixDetector.h>
+#import <ZXingObjC/ZXDataMatrixEdifactEncoder.h>
+#import <ZXingObjC/ZXDataMatrixEncoder.h>
+#import <ZXingObjC/ZXDataMatrixEncoderContext.h>
+#import <ZXingObjC/ZXDataMatrixErrorCorrection.h>
+#import <ZXingObjC/ZXDataMatrixHighLevelEncoder.h>
+#import <ZXingObjC/ZXDataMatrixReader.h>
+#import <ZXingObjC/ZXDataMatrixSymbolInfo.h>
+#import <ZXingObjC/ZXDataMatrixVersion.h>
+#import <ZXingObjC/ZXDataMatrixWriter.h>
 
 #endif

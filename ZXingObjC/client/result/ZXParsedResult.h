@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXParsedResultType.h"
-#import "ZXResult.h"
+#import <ZXingObjC/ZXParsedResultType.h>
+#import <ZXingObjC/ZXResult.h>
 
 /**
  * Abstract class representing the result of decoding a barcode, as more than

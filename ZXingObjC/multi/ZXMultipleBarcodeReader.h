@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXBinaryBitmap.h"
-#import "ZXResult.h"
+#import <ZXingObjC/ZXBinaryBitmap.h>
+#import <ZXingObjC/ZXResult.h>
 
 @class ZXDecodeHints;
 

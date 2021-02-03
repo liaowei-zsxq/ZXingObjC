@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXBarcodeFormat.h"
-#import "ZXOneDReader.h"
+#import <ZXingObjC/ZXBarcodeFormat.h>
+#import <ZXingObjC/ZXOneDReader.h>
 
 typedef enum {
   ZX_UPC_EAN_PATTERNS_L_PATTERNS = 0,

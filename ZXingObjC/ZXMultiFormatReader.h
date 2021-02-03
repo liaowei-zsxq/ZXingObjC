@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "ZXReader.h"
+#import <ZXingObjC/ZXReader.h>
 
 @class ZXDecodeHints;
 

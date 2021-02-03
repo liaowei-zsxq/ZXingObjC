@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXByteArray.h"
+#import <ZXingObjC/ZXByteArray.h>
 
 @class ZXAztecDetectorResult, ZXBoolArray, ZXDecoderResult;
 

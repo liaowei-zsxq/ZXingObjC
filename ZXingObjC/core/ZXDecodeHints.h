@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXBarcodeFormat.h"
+#import <ZXingObjC/ZXBarcodeFormat.h>
 
 @protocol ZXResultPointCallback;
 @class ZXIntArray;

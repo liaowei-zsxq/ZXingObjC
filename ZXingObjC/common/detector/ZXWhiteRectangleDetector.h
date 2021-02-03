@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXResultPoint.h"
-#import "ZXBitMatrix.h"
+#import <ZXingObjC/ZXResultPoint.h>
+#import <ZXingObjC/ZXBitMatrix.h>
 
 /**
  * Detects a candidate barcode-like rectangular region within an image. It

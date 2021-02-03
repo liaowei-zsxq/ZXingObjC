@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXReader.h"
+#import <ZXingObjC/ZXReader.h>
 
 @class ZXBinaryBitmap, ZXDecodeHints, ZXResult;
 

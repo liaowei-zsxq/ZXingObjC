@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-#import "ZXingObjCCore.h"
+#import <ZXingObjC/ZXingObjCCore.h>
 
 #ifndef _ZXINGOBJC_AZTEC_
 
 #define _ZXINGOBJC_AZTEC_
 
-#import "ZXAztecCode.h"
-#import "ZXAztecDecoder.h"
-#import "ZXAztecDetector.h"
-#import "ZXAztecDetectorResult.h"
-#import "ZXAztecEncoder.h"
-#import "ZXAztecHighLevelEncoder.h"
-#import "ZXAztecReader.h"
-#import "ZXAztecWriter.h"
+#import <ZXingObjC/ZXAztecCode.h>
+#import <ZXingObjC/ZXAztecDecoder.h>
+#import <ZXingObjC/ZXAztecDetector.h>
+#import <ZXingObjC/ZXAztecDetectorResult.h>
+#import <ZXingObjC/ZXAztecEncoder.h>
+#import <ZXingObjC/ZXAztecHighLevelEncoder.h>
+#import <ZXingObjC/ZXAztecReader.h>
+#import <ZXingObjC/ZXAztecWriter.h>
 
 #endif

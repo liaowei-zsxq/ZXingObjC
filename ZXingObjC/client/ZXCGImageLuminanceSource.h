@@ -15,8 +15,8 @@
  */
 
 #import <CoreVideo/CoreVideo.h>
-#import "ZXLuminanceSource.h"
-#import "ZXCGImageLuminanceSourceInfo.h"
+#import <ZXingObjC/ZXLuminanceSource.h>
+#import <ZXingObjC/ZXCGImageLuminanceSourceInfo.h>
 
 @class ZXImage;
 

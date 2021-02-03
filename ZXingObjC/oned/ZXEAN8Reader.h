@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXUPCEANReader.h"
+#import <ZXingObjC/ZXUPCEANReader.h>
 
 /**
  * Implements decoding of the EAN-8 format.

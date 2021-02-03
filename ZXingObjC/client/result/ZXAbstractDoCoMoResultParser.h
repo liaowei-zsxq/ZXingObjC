@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXResultParser.h"
+#import <ZXingObjC/ZXResultParser.h>
 
 /**
  * See DoCoMo's documentation http://www.nttdocomo.co.jp/english/service/imode/make/content/barcode/about/s2.html

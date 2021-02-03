@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXMultipleBarcodeReader.h"
+#import <ZXingObjC/ZXMultipleBarcodeReader.h>
 
 @protocol ZXReader;
 

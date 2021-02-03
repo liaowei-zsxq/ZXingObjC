@@ -15,9 +15,9 @@
  */
 
 #import <CoreGraphics/CoreGraphics.h>
-#import "ZXBitArray.h"
-#import "ZXBitMatrix.h"
-#import "ZXLuminanceSource.h"
+#import <ZXingObjC/ZXBitArray.h>
+#import <ZXingObjC/ZXBitMatrix.h>
+#import <ZXingObjC/ZXLuminanceSource.h>
 
 /**
  * This class hierarchy provides a set of methods to convert luminance data to 1 bit data.

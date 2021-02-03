@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXResultPoint.h"
+#import <ZXingObjC/ZXResultPoint.h>
 
 @class ZXIntArray;
 

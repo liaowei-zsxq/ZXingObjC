@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXGlobalHistogramBinarizer.h"
+#import <ZXingObjC/ZXGlobalHistogramBinarizer.h>
 
 @class ZXBinarizer, ZXBitMatrix, ZXLuminanceSource;
 

@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "ZXWriter.h"
+#import <ZXingObjC/ZXWriter.h>
 
 /**
  * This is a factory class which finds the appropriate Writer subclass for the BarcodeFormat

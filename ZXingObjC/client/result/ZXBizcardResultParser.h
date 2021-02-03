@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXAbstractDoCoMoResultParser.h"
+#import <ZXingObjC/ZXAbstractDoCoMoResultParser.h>
 
 /**
  * Implements the "BIZCARD" address book entry format, though this has been

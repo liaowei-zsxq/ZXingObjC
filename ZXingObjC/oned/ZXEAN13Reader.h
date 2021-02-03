@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXUPCEANReader.h"
+#import <ZXingObjC/ZXUPCEANReader.h>
 
 extern const int ZX_EAN13_FIRST_DIGIT_ENCODINGS[];
 

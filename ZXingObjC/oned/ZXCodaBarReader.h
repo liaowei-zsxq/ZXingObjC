@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXOneDReader.h"
+#import <ZXingObjC/ZXOneDReader.h>
 
 extern const int ZX_CODA_ALPHABET_LEN;
 extern const unichar ZX_CODA_ALPHABET[];

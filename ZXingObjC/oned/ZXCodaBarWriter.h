@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXOneDimensionalCodeWriter.h"
+#import <ZXingObjC/ZXOneDimensionalCodeWriter.h>
 
 /**
  * This class renders CodaBar as ZXBoolArray.

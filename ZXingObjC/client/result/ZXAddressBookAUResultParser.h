@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXResultParser.h"
+#import <ZXingObjC/ZXResultParser.h>
 
 /**
  * Implements KDDI AU's address book format. See http://www.au.kddi.com/ezfactory/tec/two_dimensions/index.html.

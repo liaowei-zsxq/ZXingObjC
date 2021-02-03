@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXUPCEANWriter.h"
+#import <ZXingObjC/ZXUPCEANWriter.h>
 
 /**
  * This object renders an EAN8 code as a ZXBitMatrix.

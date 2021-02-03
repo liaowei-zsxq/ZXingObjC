@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#import "ZXBarcodeFormat.h"
-#import "ZXResultMetadataType.h"
-#import "ZXByteArray.h"
+#import <ZXingObjC/ZXBarcodeFormat.h>
+#import <ZXingObjC/ZXResultMetadataType.h>
+#import <ZXingObjC/ZXByteArray.h>
 
 @class ZXByteArray;
 

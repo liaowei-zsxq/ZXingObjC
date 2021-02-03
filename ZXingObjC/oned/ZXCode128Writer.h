@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXOneDimensionalCodeWriter.h"
+#import <ZXingObjC/ZXOneDimensionalCodeWriter.h>
 
 /**
  * This object renders a CODE128 code as a ZXBitMatrix.

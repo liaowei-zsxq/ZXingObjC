@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXGridSampler.h"
+#import <ZXingObjC/ZXGridSampler.h>
 
 @class ZXBitMatrix, ZXPerspectiveTransform;
 

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXBitMatrix.h"
-#import "ZXDetectorResult.h"
+#import <ZXingObjC/ZXBitMatrix.h>
+#import <ZXingObjC/ZXDetectorResult.h>
 
 @interface ZXAztecDetectorResult : ZXDetectorResult
 

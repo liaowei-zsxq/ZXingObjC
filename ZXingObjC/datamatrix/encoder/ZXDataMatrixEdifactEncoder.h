@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXDataMatrixEncoder.h"
+#import <ZXingObjC/ZXDataMatrixEncoder.h>
 
 @interface ZXDataMatrixEdifactEncoder : NSObject <ZXDataMatrixEncoder>
 

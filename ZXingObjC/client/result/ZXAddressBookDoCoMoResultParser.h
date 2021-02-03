@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#import "ZXAbstractDoCoMoResultParser.h"
-#import "ZXResult.h"
+#import <ZXingObjC/ZXAbstractDoCoMoResultParser.h>
+#import <ZXingObjC/ZXResult.h>
 
 /**
  * Implements the "MECARD" address book entry format.
