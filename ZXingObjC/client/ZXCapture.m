@@ -211,25 +211,15 @@
 }
 
 - (BOOL)hasFront {
-#if TARGET_OS_MACCATALYST
   return [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
                                                                 mediaType:AVMediaTypeVideo
                                                                  position:AVCaptureDevicePositionFront].devices.count > 0;
-#else
-  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-  return [devices count] > 1;
-#endif
 }
 
 - (BOOL)hasBack {
-#if TARGET_OS_MACCATALYST
   return [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera]
                                                                 mediaType:AVMediaTypeVideo
                                                                  position:AVCaptureDevicePositionBack].devices.count > 0;
-#else
-  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-  return [devices count] > 0;
-#endif
 }
 
 - (BOOL)hasTorch {
@@ -533,7 +523,6 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   }
   
   AVCaptureDevice *zxd = nil;
-#if TARGET_OS_MACCATALYST
   NSArray<AVCaptureDevice *> *devices = nil;
   if (self.captureDeviceIndex == -1) {
     AVCaptureDevicePosition position = AVCaptureDevicePositionBack;
@@ -559,35 +548,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
       self.captureDeviceIndex = 0;
     }
   }
-#else
-  NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-  
-  if ([devices count] > 0) {
-    if (self.captureDeviceIndex == -1) {
-      AVCaptureDevicePosition position = AVCaptureDevicePositionBack;
-      if (self.camera == self.front) {
-        position = AVCaptureDevicePositionFront;
-      }
-      
-      for (unsigned int i = 0; i < [devices count]; ++i) {
-        AVCaptureDevice *dev = [devices objectAtIndex:i];
-        if (dev.position == position) {
-          self.captureDeviceIndex = i;
-          zxd = dev;
-          break;
-        }
-      }
-    }
-    
-    if (!zxd && self.captureDeviceIndex != -1) {
-      zxd = [devices objectAtIndex:self.captureDeviceIndex];
-    }
-  }
-  
-  if (!zxd) {
-    zxd = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-  }
-#endif
+
   self.captureDevice = zxd;
   
   return zxd;
